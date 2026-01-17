@@ -1,0 +1,20 @@
+export default function ArrowIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+    >
+      <path
+        d="M19.5 12.5L15.2143 7.5M19.5 12.5L15.2143 17.5M19.5 12.5C19.5 12.5 16.9285 12.5 10.9286 12.5C4.92864 12.5 4.50003 12.5 4.50003 12.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
