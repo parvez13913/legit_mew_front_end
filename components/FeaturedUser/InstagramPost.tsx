@@ -3,8 +3,6 @@ import Image from "next/image";
 
 interface InstagramPost {
   id: number;
-  userName: string;
-  userPhoto: string;
   image: string;
   description: string;
   likes: number;
@@ -14,8 +12,6 @@ interface InstagramPost {
 const posts: InstagramPost[] = [
   {
     id: 1,
-    userName: "Jane Cooper",
-    userPhoto: "/images/Image-5.png",
     image: "/images/InstagramPosts-1.png",
     description:
       "Lorem ipsum is a long, dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.",
@@ -24,8 +20,6 @@ const posts: InstagramPost[] = [
   },
   {
     id: 2,
-    userName: "Floyd Miles",
-    userPhoto: "/images/Image-6.png",
     image: "/images/InstagramPosts-2.png",
     description:
       "Lorem ipsum is a long, dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.",
@@ -46,16 +40,6 @@ export default function InstagramPosts() {
       <div className="space-y-6">
         {posts.map((post) => (
           <div key={post.id} className="flex flex-col">
-            <div className="flex items-center gap-3 mb-3">
-              <Image
-                src={post.userPhoto}
-                alt={post.userName}
-                height={100}
-                width={100}
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <h6>{post.userName}</h6>
-            </div>
             {/* Post Image */}
             <Image
               src={post.image || "/placeholder.svg"}
